@@ -204,7 +204,7 @@ h2 { margin-bottom: 25px; font-size: clamp(35px, 7.4vw, 56px); line-height: 1.16
   :root { --eye-strip-height: clamp(72px, 20vw, 90px); }
   html { scroll-padding-top: calc(var(--eye-strip-height) + 16px); }
   .site-header { margin-top: var(--eye-strip-height); }
-  .hero-image { position: fixed; z-index: 10; top: 0; left: 0; width: 100%; max-width: none; height: var(--eye-strip-height); aspect-ratio: auto; }
+  .hero-image { position: fixed; z-index: 10; top: 0; left: 0; width: 100%; max-width: none; height: var(--eye-strip-height); aspect-ratio: auto; border-bottom: 1px solid var(--rule); }
   .hero-image img { object-position: center 38%; filter: grayscale(100%); }
 }
 
