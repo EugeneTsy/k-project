@@ -2,7 +2,7 @@ import { cp, mkdir, readFile, rm, stat } from 'node:fs/promises';
 
 const root = new URL('../', import.meta.url);
 const dist = new URL('../dist/', import.meta.url);
-const files = ['index.html', 'styles.css', 'site.mjs', 'config.mjs', 'favicon.svg', 'assets/portrait.webp',
+const files = ['index.html', 'styles.css', 'site.mjs', 'config.mjs', 'favicon.svg', 'assets/portrait.webp', 'assets/half-face.jpg',
   'assets/fonts/PT_Sans-Web-Regular.woff2', 'assets/fonts/PT_Sans-Web-Bold.woff2',
   'assets/fonts/PT_Serif-Web-Regular.woff2', 'assets/fonts/OFL-PT-Sans.txt',
   'assets/fonts/OFL-PT-Serif.txt'];
@@ -15,8 +15,10 @@ for (const file of files) {
   const metadata = await stat(new URL(file, root));
   if (!metadata.isFile() || metadata.size === 0) throw new Error(`Missing or empty file: ${file}`);
 }
-const portrait = await stat(new URL('assets/portrait.webp', root));
-if (portrait.size > 300_000) throw new Error('Portrait exceeds the 300 KB limit.');
+for (const image of ['assets/portrait.webp', 'assets/half-face.jpg']) {
+  const metadata = await stat(new URL(image, root));
+  if (metadata.size > 300_000) throw new Error(`${image} exceeds the 300 KB limit.`);
+}
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });

@@ -31,14 +31,17 @@
         <a href="#price">Стоимость</a>
         <a href="#contact">Запись</a>
       </nav>
-      <a class="header-cta" href="#contact" data-telegram-link>Написать в Telegram</a>
+      <a class="header-cta" href="#contact" data-telegram-link><span class="header-cta-long">Написать в Telegram</span><span class="header-cta-short">Записаться</span></a>
     </div>
   </header>
 
   <main id="main">
     <section id="top" class="hero shell" aria-labelledby="hero-title">
       <div class="hero-image">
-        <img src="./assets/portrait.webp" alt="Портрет Ксении Погореловой, психолога" width="887" height="1000" fetchpriority="high">
+        <picture>
+          <source media="(min-width: 900px)" srcset="./assets/half-face.jpg" width="404" height="941">
+          <img src="./assets/portrait.webp" alt="Портрет Ксении Погореловой" width="887" height="1000" fetchpriority="high">
+        </picture>
       </div>
       <div class="hero-copy">
         <h1 id="hero-title">Погорелова Ксения Константиновна</h1>
@@ -174,9 +177,12 @@
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <div>
-        <p class="footer-name">Ксения Константиновна Погорелова</p>
-        <a class="footer-telegram" href="#contact" data-telegram-link>Telegram <span data-telegram-handle></span></a>
+      <div class="footer-identity">
+        <span class="footer-avatar"><img src="./assets/portrait.webp" alt="" width="72" height="72" loading="lazy"></span>
+        <div>
+          <p class="footer-name">Ксения Константиновна Погорелова</p>
+          <a class="footer-telegram" href="#contact" data-telegram-link>Telegram <span data-telegram-handle></span></a>
+        </div>
       </div>
       <p class="footer-disclaimer">Консультация не заменяет медицинскую помощь. В кризисной ситуации звоните <a href="tel:112">112</a>.</p>
       <a class="back-to-top" href="#top">Наверх ↑</a>
