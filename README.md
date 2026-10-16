@@ -10,7 +10,7 @@
 - Цвета, отступы и адаптивная вёрстка: `styles.css`.
 - Username Telegram и текст черновика: только `config.mjs`. Скрипт `site.mjs` подставляет их во все четыре ссылки.
 - Архив исходных фото находится вне Git-копии в `../assets/photos.zip`. Для мобильного первого экрана и футера используется уменьшенное `assets/portrait.webp`; оригинал «Фото на сайт» включён в Git как `assets/half-face.jpg` для правой полосы на десктопе.
-- Иконки действий и ссылок хранятся в `assets/icons/`; они взяты из официального набора Google Material Design Icons и включены в пакет сайта локально.
+- Иконки и логотипы ссылок хранятся в `assets/icons/` и включены в пакет сайта локально. Логотип Telegram взят из [официального архива Telegram](https://telegram.org/tour/screenshots), чёрный знак Instagram — из [официального набора Meta](https://www.meta.com/brand/resources/instagram/instagram-brand/). Остальные иконки — Google Material Design Icons.
 - В `dist/` попадают только файлы для сайта. Исходники тестов и рабочие документы не публикуются.
 
 При отключённом JavaScript тексты и разделы видны; ссылки «Написать в Telegram» переходят к блоку записи. Для заполнения ссылок с текстом черновика нужен JavaScript.
@@ -44,4 +44,4 @@ Workflow запускается только после изменения ве�
 
 ## Лицензии и источники
 
-Локальные PT Sans и PT Serif взяты из [Google Fonts](https://github.com/google/fonts); их лицензии находятся в `assets/fonts/OFL-PT-Sans.txt` и `assets/fonts/OFL-PT-Serif.txt`. SVG взяты из [Google Material Design Icons](https://github.com/google/material-design-icons); текст лицензии — `assets/icons/LICENSE-Material-Icons.txt`. Формат Telegram-ссылки с черновиком описан в [официальной документации Telegram](https://core.telegram.org/api/links).
+Локальные PT Sans и PT Serif взяты из [Google Fonts](https://github.com/google/fonts); их лицензии находятся в `assets/fonts/OFL-PT-Sans.txt` и `assets/fonts/OFL-PT-Serif.txt`. Иконки внешних ссылок и «Наверх» взяты из [Google Material Design Icons](https://github.com/google/material-design-icons); текст лицензии — `assets/icons/LICENSE-Material-Icons.txt`. Логотипы Telegram и Instagram используются для ссылок на соответствующие сервисы; сайт не представляет и не рекламирует эти платформы от их имени. Формат Telegram-ссылки с черновиком описан в [официальной документации Telegram](https://core.telegram.org/api/links).

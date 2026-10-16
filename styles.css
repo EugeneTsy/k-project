@@ -45,10 +45,8 @@ a { color: inherit; text-underline-offset: .22em; }
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 .icon { display: inline-block; flex: none; width: 20px; height: 20px; background: currentColor; -webkit-mask: var(--icon-mask) center / contain no-repeat; mask: var(--icon-mask) center / contain no-repeat; }
-.icon-send { --icon-mask: url('./assets/icons/send.svg'); }
-.icon-forum { --icon-mask: url('./assets/icons/forum.svg'); }
-.icon-camera { --icon-mask: url('./assets/icons/photo_camera.svg'); }
 .icon-up { --icon-mask: url('./assets/icons/arrow_upward.svg'); }
+.brand-icon { display: block; flex: none; width: 20px; height: 20px; object-fit: contain; }
 .shell { width: min(calc(100% - 40px), var(--shell)); margin-inline: auto; }
 .skip-link {
   position: absolute;
@@ -66,7 +64,7 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 .brand { font-size: 17px; font-weight: 700; letter-spacing: -.015em; text-decoration: none; white-space: nowrap; }
 .desktop-nav { display: none; }
 .header-cta { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 9px 11px; border: 1px solid var(--button); border-radius: 2px; background: var(--button); color: #fff; font-size: 13px; font-weight: 700; line-height: 1.2; text-align: center; text-decoration: none; }
-.header-cta .icon { width: 16px; height: 16px; }
+.header-cta .brand-icon { width: 18px; height: 18px; }
 .header-cta-long { display: none; }
 .header-cta:hover { background: transparent; color: var(--ink); }
 .footer-links a:hover, .back-to-top:hover { text-decoration: underline; }
@@ -152,7 +150,7 @@ h2 { margin-bottom: 25px; font-size: clamp(35px, 7.4vw, 56px); line-height: 1.16
 .social-links a { display: inline-flex; min-height: 44px; align-items: center; gap: 9px; padding: 9px 13px; border: 1px solid var(--rule); color: var(--ink); font-size: 15px; font-weight: 700; line-height: 1.25; text-decoration: none; }
 .social-links a:hover { border-color: var(--ink); }
 .social-links a:active { opacity: .65; }
-.social-links .icon { width: 19px; height: 19px; }
+.social-links .brand-icon { width: 20px; height: 20px; }
 .disclaimer { max-width: 560px; margin-top: 22px; color: var(--muted); font-size: 15px; line-height: 1.55; }
 .contraindications-list { display: grid; gap: 0 20px; padding: 0; margin: 27px 0 0; list-style: none; counter-reset: contraindication; }
 .contraindications-list li { display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid var(--rule); font-size: 16px; line-height: 1.5; counter-increment: contraindication; }
@@ -167,7 +165,7 @@ h2 { margin-bottom: 25px; font-size: clamp(35px, 7.4vw, 56px); line-height: 1.16
 .footer-name { margin-bottom: 9px; font-size: 17px; font-weight: 700; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
 .footer-links a { display: inline-flex; align-items: center; gap: 5px; font-size: 15px; text-decoration: none; }
-.footer-links .icon { width: 17px; height: 17px; }
+.footer-links .brand-icon { width: 18px; height: 18px; }
 .footer-disclaimer { max-width: 340px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
 .back-to-top { display: inline-flex; align-self: start; align-items: center; gap: 4px; font-size: 16px; text-decoration: none; }
 .back-to-top .icon { width: 19px; height: 19px; }

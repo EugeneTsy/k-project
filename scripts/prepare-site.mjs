@@ -3,7 +3,7 @@ import { cp, mkdir, readFile, rm, stat } from 'node:fs/promises';
 const root = new URL('../', import.meta.url);
 const dist = new URL('../dist/', import.meta.url);
 const files = ['index.html', 'styles.css', 'site.mjs', 'config.mjs', 'favicon.svg', 'assets/portrait.webp', 'assets/half-face.jpg',
-  'assets/icons/send.svg', 'assets/icons/forum.svg', 'assets/icons/photo_camera.svg',
+  'assets/icons/telegram-logo.svg', 'assets/icons/instagram-glyph-black.svg',
   'assets/icons/open_in_new.svg', 'assets/icons/arrow_upward.svg', 'assets/icons/LICENSE-Material-Icons.txt',
   'assets/fonts/PT_Sans-Web-Regular.woff2', 'assets/fonts/PT_Sans-Web-Bold.woff2',
   'assets/fonts/PT_Serif-Web-Regular.woff2', 'assets/fonts/OFL-PT-Sans.txt',
