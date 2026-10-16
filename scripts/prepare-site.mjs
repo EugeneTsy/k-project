@@ -2,7 +2,7 @@ import { cp, mkdir, readFile, rm, stat } from 'node:fs/promises';
 
 const root = new URL('../', import.meta.url);
 const dist = new URL('../dist/', import.meta.url);
-const files = ['index.html', 'styles.css', 'site.mjs', 'config.mjs', 'favicon.svg', 'assets/portrait.webp', 'assets/half-face.jpg',
+const files = ['index.html', 'styles.css', 'site.mjs', 'config.mjs', 'favicon.svg', 'assets/portrait.webp', 'assets/portrait-2021.jpg',
   'assets/icons/telegram-logo.svg', 'assets/icons/instagram-glyph-black.svg',
   'assets/icons/open_in_new.svg', 'assets/icons/arrow_upward.svg', 'assets/icons/LICENSE-Material-Icons.txt',
   'assets/fonts/PT_Sans-Web-Regular.woff2', 'assets/fonts/PT_Sans-Web-Bold.woff2',
@@ -17,7 +17,7 @@ for (const file of files) {
   const metadata = await stat(new URL(file, root));
   if (!metadata.isFile() || metadata.size === 0) throw new Error(`Missing or empty file: ${file}`);
 }
-for (const image of ['assets/portrait.webp', 'assets/half-face.jpg']) {
+for (const image of ['assets/portrait.webp', 'assets/portrait-2021.jpg']) {
   const metadata = await stat(new URL(image, root));
   if (metadata.size > 300_000) throw new Error(`${image} exceeds the 300 KB limit.`);
 }
