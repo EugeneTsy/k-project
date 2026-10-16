@@ -163,7 +163,9 @@ h2 { margin-bottom: 25px; font-size: clamp(35px, 7.4vw, 56px); line-height: 1.16
   .method-research { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
   .method-research > div + div { padding-top: 0; padding-left: 28px; border-top: 0; border-left: 1px solid var(--rule); }
   .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .footer-inner { grid-template-columns: minmax(0, 1fr) 340px auto; align-items: start; gap: 40px; padding-block: 38px 48px; }
+  .footer-inner { grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 28px; padding-block: 38px 48px; }
+  .footer-disclaimer { grid-column: 1 / -1; grid-row: 2; max-width: 600px; }
+  .back-to-top { grid-column: 2; grid-row: 1; }
 }
 
 @media (min-width: 900px) {
@@ -175,8 +177,6 @@ h2 { margin-bottom: 25px; font-size: clamp(35px, 7.4vw, 56px); line-height: 1.16
   .hero-copy { width: 100%; max-width: 760px; align-self: flex-start; }
   h1 { font-size: clamp(44px, 5vw, 76px); overflow-wrap: normal; }
   .hero-intro { max-width: 550px; font-size: 20px; line-height: 1.5; }
-  .footer-inner { grid-template-columns: minmax(0, 1fr) auto; }
-  .footer-disclaimer { grid-column: 1 / -1; max-width: 600px; }
 }
 
 @media (min-width: 900px) and (max-width: 1199px) {
@@ -195,7 +195,7 @@ h2 { margin-bottom: 25px; font-size: clamp(35px, 7.4vw, 56px); line-height: 1.16
   .desktop-nav { display: flex; }
   .header-cta { margin-left: 28px; }
   .footer-inner { grid-template-columns: minmax(0, 1fr) 300px auto; }
-  .footer-disclaimer { grid-column: auto; }
+  .footer-disclaimer, .back-to-top { grid-column: auto; grid-row: auto; }
 }
 
 @media (max-width: 699px) {
