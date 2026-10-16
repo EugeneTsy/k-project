@@ -38,7 +38,10 @@
   <main id="main">
     <section id="top" class="hero shell" aria-labelledby="hero-title">
       <div class="hero-image">
-        <img src="./assets/portrait-2021.jpg" alt="Портрет Ксении Погореловой" width="1034" height="1280" fetchpriority="high">
+        <picture>
+          <source media="(min-width: 900px)" srcset="./assets/portrait-half.jpg">
+          <img src="./assets/portrait-2021.jpg" alt="Портрет Ксении Погореловой" width="1034" height="1280" fetchpriority="high">
+        </picture>
       </div>
       <div class="hero-copy">
         <h1 id="hero-title">Погорелова Ксения Константиновна</h1>
